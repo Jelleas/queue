@@ -3,8 +3,8 @@
  *
  * 6-10-2014
  * 
- * Simple program that lets the user store integer numbers in a queue
- * and can then print them. 
+ * Program that lets the user store integer numbers in a queue
+ * and the user can then pop and print those numbers.
  */
  
 #include <cs50.h>
