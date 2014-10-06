@@ -104,6 +104,7 @@ void free_queue(int_queue* queue)
  */
 void add(int_queue* queue, int value)
 {
+    // TODO
 }
 
 /**
@@ -111,5 +112,6 @@ void add(int_queue* queue, int value)
  */
 int pop(int_queue* queue)
 {
+    // TODO
     return 0;
 }
