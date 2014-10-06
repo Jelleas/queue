@@ -77,7 +77,9 @@ int main(int argc, char* argv[])
     return 0;
 }
 
-// Initialize an int_queue.
+/*
+ *Initialize an int_queue.
+ */
 int_queue* init_queue(void)
 {
     int_queue* queue = malloc(sizeof(int_queue));
@@ -87,6 +89,9 @@ int_queue* init_queue(void)
     return queue;
 }
 
+/*
+ * Free the queue and every element in it.
+ */
 void free_queue(int_queue* queue)
 {
     for (int i = 0, l = queue->length; i < l; i++)
