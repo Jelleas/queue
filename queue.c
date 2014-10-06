@@ -25,6 +25,7 @@ typedef struct
 } int_queue;
 
 int_queue* init_queue(void);
+void free_queue(int_queue* queue);
 int pop(int_queue* queue);
 void add(int_queue* queue, int val);
 
@@ -69,10 +70,7 @@ int main(int argc, char* argv[])
         }
     }
     
-    // free remaining elements in queue
-    for (int i = 0, l = queue->length; i < l; i++)
-        pop(queue);
-    free(queue);
+    free_queue(queue);
     
     printf("Thanks for playing!\n");
     
@@ -89,12 +87,18 @@ int_queue* init_queue(void)
     return queue;
 }
 
+void free_queue(int_queue* queue)
+{
+    for (int i = 0, l = queue->length; i < l; i++)
+        pop(queue);
+    free(queue);    
+}
+
 /**
  * Add value to queue.
  */
 void add(int_queue* queue, int value)
 {
-    // TODO
 }
 
 /**
@@ -102,6 +106,5 @@ void add(int_queue* queue, int value)
  */
 int pop(int_queue* queue)
 {
-    // TODO
     return 0;
 }
